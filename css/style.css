@@ -1,5 +1,7 @@
+/*import custom font*/
 @import url('https://fonts.googleapis.com/css2?family=Cousine&display=swap');
 
+/*standaard body stijling*/
 *{margin: 0;
 padding: 0;
 box-sizing: border-box;
@@ -10,16 +12,16 @@ scroll-behavior: smooth;
 }
 
 body{
-     /*circle height*/
+     /*Circle hoogte*/
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 10vh;
-    /*background kleur en padding*/
+    /*Achtergrond kleur en padding*/
     padding: 20px;
     background: -webkit-linear-gradient(right, #000000, #00011b);
 }
-/*header styling*/
+/*Header styling*/
 header{
     display: flex;
     margin-left: -20%;
@@ -100,7 +102,7 @@ header{
 .next{
     right: 0;
 }
-/*dots*/
+/*Dots pagina's slideshow*/
 .dotsbox{
     position: absolute;
     left: 50%;
@@ -126,7 +128,7 @@ active, .dot:hover{
     animation-name: fade;
     animation-duration: 1.5s;
 }
-/*animaties*/
+/*Animaties Slideshow*/
 @-webkit-keyframes fade{
     from {opacity: 0.8;}
     to {opacity: 1;}
@@ -313,8 +315,7 @@ a:link {
     color: #275ef5;
   }
 
-  
-  
+  /*-----------------------<a> link styling---------------------/*
   /* visited link */
   a:visited {
     color: #4bd5ff;
@@ -523,12 +524,3 @@ a:link {
         margin-right: auto;
     }
 }
-
-
-
-
-/*Percenteges information
-
-.wrapper{
-    width: 800px;
-}                       breedte aanpassen in mediaquery*/

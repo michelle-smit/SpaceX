@@ -1,4 +1,4 @@
-/*Slideshow top page*/
+/*---------------------Slideshow boven aan site-------------------*/
 const myslide = document.querySelectorAll('.myslider'),
     dot = document.querySelectorAll('.dot');
 
@@ -45,7 +45,7 @@ function slidefun(n) {
 
 
 
-/*--------------------Chart/Tabel persoonlijke info-------------------*/
+/*--------------------Chart/Tabel persoonlijke info / optellen-------------------*/
 $(".num").counterUp({delay:10,time:100,time:7000});
 
 
@@ -58,7 +58,7 @@ $(".num").counterUp({delay:10,time:100,time:7000});
 
 
 
-/*------------------------circle prosses fill-------------------------*/
+/*------------------------circle voortgang vullen - statistiche gegevens SpaceX-------------------------*/
 var progressBars = document.querySelectorAll('.progress-container');
 
 console.log(progressBars);
@@ -80,12 +80,10 @@ function progress(value) {
   var progress = value / 100;
   var dashoffset = circumference * (1 - progress);
 
-  // TODO: Remove before entering into production
   console.log("progress:", value + "%", "|", "offset:", dashoffset);
 
   progressValue.style.strokeDashoffset = dashoffset;
 
-  //valueContainer.innerHTML = value + '%';
   animateValue(valueContainer, 0, dataValue, 1500);
 }
 
@@ -93,13 +91,12 @@ function animateValue(selector, start, end, duration) {
   var obj = selector;
   var range = end - start;
 
-  // no timer shorter than 50ms (not really visible any way)
   var minTimer = 50;
-  // calc step time to show all interediate values
+
   var stepTime = Math.abs(Math.floor(duration / range));
-  // never go below minTimer
+
   stepTime = Math.max(stepTime, minTimer);
-  // get current time and calculate desired end time
+
   var startTime = new Date().getTime();
   var endTime = startTime + duration;
   var timer;

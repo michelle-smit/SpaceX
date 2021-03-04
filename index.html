@@ -2,185 +2,48 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>Naamloos document</title>
+		<title>SpaceX Sleep Schedule</title>
 		<!--Stylesheet inset-->
 		<link href="css/style.css" rel="stylesheet"/>
-		<!--Font Insert-->
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
-
-		<!--Jquery files-slideshow-->
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.2/circle-progress.min.js"></script>
-		<!--number aniamtion-->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
 	</head>
+<body function="dateTime();">
 
-	<body>
-		<div class="grid-container">
 
-			<!--Menu-->
-			<br><br><br>
-            <header>
-				<div id=logo>SpaceX <a id="logo-s">Client</a></a></div><br><br>
-				<div class="buttons">
-                	<span class="sign"><a class="act" href="#">Welkom Kjelt</a></span>
-					<span class="sign"><a class="act" href="#">Ander acount</a></span>
-				</div>
-			</header>
-			<!--Einde-Menu-->
-			
-			<section>
-					<!--inhoud slideshow-->
-						<!--info over mars-->
-					<div class="slider">
-						<div class="myslider fade" style="display: block;">
-							<div class="txt">
-								<h1>De manen van Mars</h1>
-								<p>Mars heeft twee manen, Phobos en Deimos, beide kleine onregelmatig gevormde objecten. Er is wel verondersteld dat deze twee manen door de zwaartekracht van Mars ingevangen planetoïden zijn.</p>
-							</div>
-							<img src="images/overview.jpg" alt="settlement on Mars">
-						</div>
-						<div class="myslider fade">
-							<div class="txt">
-								<h1>Mars VS. Aarde</h1>
-								<p>De planeet Mars lijkt meer op onze eigen planeet Aarde dan alle andere planeten. Toch zijn er ook zeer grote verschillen. Mars heeft vier seizoenen als gevolg van de schuine stand van de rotaties.</p>
-							</div>
-							<img src="images/colonie.jpg" alt="settlement on Mars">
-						</div>
-						<div class="myslider fade">
-							<div class="txt">
-								<h1>Reistijd</h1>
-								<p>Het kost acht maanden om de Rode planeet te bereiken. Dit is langer dan astronauten in de ISS blijven! En Dan moeten ze dus ook nog eens 8 maanden terug reizen naar de Aarde.</p>
-							</div>
-							<img src="images/settlement.jpg" alt="settlement on Mars">
-						</div>
-						<div class="myslider fade">
-							<div class="txt">
-								<h1>Water op Mars</h1>
-								<p>In 2015 werd er bewijs gevonden dat er een gigantische oceaan zou zijn geweest op Mars. Er werd ontdekt dat deze oceaan op sommige plekken meer dan 1,5 kilometer diep zou zijn geweest en over meer water beschikte dan de Aardse Arctische Oceaan.</p>
-							</div>
-							<img src="images/landscape.jpg" alt="settlement on Mars">
-						</div>
-						<div class="myslider fade">
-							<div class="txt">
-								<h1>Electromachnetische velden</h1>
-								<p>Convectie onder invloed van de afkoeling in de vloeibare buitenkern van de Aarde is de oorzaak van het aardmagnetisch veld. Hoewel Mars waarschijnlijk een gedeeltelijk vloeibare kern heeft, heeft Mars tegenwoordig geen actief magnetisch veld meer.</p>
-							</div>
-							<img src="images/planet.jpg" alt="settlement on Mars">
-						</div>
+	<div id="output">
 
-						<!--klikbare buttons van de slideshow-->
-						<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-						<a class="next" onclick="plusSlides(1)">&#10095;</a>
+	</div>
 
-						<div class="dotsbox">
-							<span class="dot" onclick="currentSlide(1)"></span>
-							<span class="dot" onclick="currentSlide(2)"></span>
-							<span class="dot" onclick="currentSlide(3)"></span>
-							<span class="dot" onclick="currentSlide(4)"></span>
-							<span class="dot" onclick="currentSlide(5)"></span>
-						</div>
-					</div>
-			</section>
-			<!--Einde slideshow-->
+	<div class="india">
+		<h1>India</h1>
+		<p id="indiaTime"></p>
+	</div>
 
-			<!--Welkomsbericht-->
-			<br>
-			<section class="welkom">
-			<h2>Portal info</h2>
-			<br>
-			<p>Hey Mars reiziger, Welkom bij de reis van je leven! De reis zal bestaan uit 6 maanden reizen en 1 maand in de corona van mars. Tijdens deze reis zul je
-			   mars van dichtbij zien en eventueel ook op de planeet lopen. U bent een van de eerste reizigers die zo dichtbij de planeet zal komen en zijn geheimen zal
-			   onthullen.
-			</p>
-			</section>
-			<!--Einde WelkomsBericht-->
+	<div class="london">
+		<h1>London</h1>
+		<p id="londonTime"></p>
+	</div>
 
-			<!--chart persoonlijke & SpaceX-info-->
-			<section id="counter">
-				<div class="middle">
-					<div class="counting-sec"></div>
-					<div class="inner-with">
-						<div class="col">
-							<i class="fas fa-bed"></i>
-							<div class="num">1.278</div>
-							Slaap uren
-						</div>
-						<div class="col">
-							<i class="fas fa-space-shuttle"></i>
-							<div class="num">3.834</div>
-							Vlieguren
-						</div>
-						<div class="col">
-							<i class="fas fa-utensils"></i>
-							<div class="num">43</div>
-							Maaltijden
-						</div>
-						<div class="col">
-							<i class="far fa-object-group"></i>
-							<div class="num">58</div>
-							Documentatie uren
-						</div>
-					</div>
-				</div>
-			</section>
-			<!--Einde Chart info-->
-			<br><br><br><br>
+	<div class="newyork">
+		<h1>New York</h1>
+		<p id="newyorkTime"></p>
+	</div>
 
-			<!--Gauge-->
-			<aside class="gauge">
-				<div class="gaugeBody">
-					<div class="gaugeFill"></div>
-					<div class="gaugeCover">G-force: 3g</div>
-				</div>
-			</aside>
-			<br><br>
+	<div class="sydney">
+		<h1>Sydney</h1>
+		<p id="sydneyTime"></p>
+	</div>
 
-			<!--start info G-force-->
-			<section class="gforce left">
-			<h2>Gauge: G-force</h2>
-			<p>Het is belangrijk om te weten wat G-force met je doet zodat je weet hoe je moet handelen wanneer de meter een gevaarlijke waarde aangeeft.
-				Wanneer de G-force tussen de 1-2G zit is het goed te verdragen en is je veiligheidsgordel niet nodig. wanneer deze waarde tussen de 2-3g 
-				zit kun je beter gaan zitten aangezien dit het gezichtveld verkleind. Wanneer de meter 3-4 g aangeeft kan er Grey-Out optreden waarbij je 
-				bepaalde dingen in je gezichtsveld niet meer waarneemt. Met een waarde van 4-5 g kan een blackout (geheugenverlies) optreden. vanaf 5-6 
-				raak je bewusteloos. Hou je dus aan de voorgeschreven regels. <a href="#">Lees hier meer</a><br><br><br>
-			</p>
-			<!--Einde info G-force-->
-			</section>
-			<!--einde Gauge-->
+	<div class="warsaw">
+		<h1>Warsaw</h1>
+		<p id="warsawTime"></p>
+	</div>
+	
+	<div class="shanghai">
+		<h1>Shanghai</h1>
+		<p id="shanghaiTime"></p>
+	</div>
 
-			<!--verbruik waardes-->
-			<section class="grid-item title">
-				<div class="progress-container" data-value="79">
-					<svg class="progress-bar" id="svg" width="120" height="120" viewPort="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
-					  <circle class="progress-meter" r="48" cx="60" cy="60" fill="transparent" stroke-width="20" stroke-dashoffset="0"></circle>
-					  <circle class="progress-value" r="48" cx="60" cy="60" fill="transparent" stroke-width="20" stroke-dashoffset="0" stroke-dasharray="301.59"></circle>
-					</svg>
-					<span>0%</span>
-				  </div>
-				  <h3>Brandstof</h3>
-				  
-				  <div class="progress-container" data-value="63">
-					<svg class="progress-bar" id="svg" width="120" height="120" viewPort="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
-					  <circle class="progress-meter" r="48" cx="60" cy="60" fill="transparent" stroke-width="20" stroke-dashoffset="0"></circle>
-					  <circle class="progress-value" r="48" cx="60" cy="60" fill="transparent" stroke-width="20" stroke-dashoffset="0" stroke-dasharray="301.59"></circle>
-					</svg>
-					<span>0%</span>
-				  </div>
-				  <h3>Energie</h3>
-				  
-				  <div class="progress-container" data-value="57">
-					<svg class="progress-bar" id="svg" width="120" height="120" viewPort="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
-					  <circle class="progress-meter" r="48" cx="60" cy="60" fill="transparent" stroke-width="20" stroke-dashoffset="0"></circle>
-					  <circle class="progress-value" r="48" cx="60" cy="60" fill="transparent" stroke-width="20" stroke-dashoffset="0" stroke-dasharray="301.59"></circle>
-					</svg>
-					<span>0%</span>
-				  </div>
-				  <h3>Randsoen</h3>
-			</section>
-		<!--einde verbruik waardes-->
+
 		
 		<!--Copyright-->
 		<footer>

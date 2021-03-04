@@ -13,22 +13,374 @@ scroll-behavior: smooth;
 
 body{
      /*Circle hoogte*/
+    display: flex;
     align-items: center;
     justify-content: center;
     min-height: 10vh;
     /*Achtergrond kleur en padding*/
     padding: 20px;
-    background: -webkit-linear-gradient(right, #14005c, #00011b);
+    background: -webkit-linear-gradient(right, #000000, #00011b);
+}
+/*Header styling*/
+header{
+    display: flex;
+    margin-left: -20%;
+    height: 60px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+}
+#logo{
+    line-height: 60px;
+    margin-left: 120px;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 30px;
+    font-weight: bold;
+    color: #275ef5;
+}
+#logo:hover{
+    color: #df4102;
+}
+#logo-s{
+    color: #ecf0f1;
+    margin-left: 5px;
+}
+#logo:hover #logo-s{
+    color: #ca1010;
+}
+#buttons{
+    margin-right: 30px;
+}
+.sign{
+    margin-left: 20px;
+    float: right;
+    line-height: 60px;
+
+}
+.sign a{
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+}
+.act{
+    border: 2px solid #db6402;
+    border-radius: 50px;
+    padding: 6px 15px;
+}
+.sign a:hover{
+    color: #ffffff;
+    border-color: #ffffff;
+}
+/*-------------------------------------------slideshow----------------------------------------------*/
+.slider{
+    position: relative;
+    width: 100%;
+    background: #000000;
+}
+.myslider{
+    height: 655px;
+    display: none;
+    overflow: hidden;
+}
+/*prev en next buttons voor scrollen door slide show*/
+.prev, .next{
+    position: absolute;
+    top: 50%;
+    transform: translate(0. -50%);
+    font-size: 50px;
+    padding: 15px;
+    cursor: pointer;
+    color: #ffffff;
+    transition: 0.1;
+    user-select: none;
+}
+.prev:hover, .next:hover{
+    color: #3498db;
+}
+.next{
+    right: 0;
+}
+/*Dots pagina's slideshow*/
+.dotsbox{
+    position: absolute;
+    left: 50%;
+    transform: translate(50%);
+    bottom: 20px;
+    cursor: pointer;
+}
+.dot{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border: 3px solid #ffffff;
+    border-radius: 50%;
+    margin: 0 10px;
+    cursor: pointer;
+}
+active, .dot:hover{
+    border-color: #3498db;
+}
+.fade{
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+/*Animaties Slideshow*/
+@-webkit-keyframes fade{
+    from {opacity: 0.8;}
+    to {opacity: 1;}
+}
+@keyframes fade{
+    from {opacity: 0.8;}
+    to {opacity: 1;}
+}
+.txt{
+    position: absolute;
+    color: #ffffff;
+    letter-spacing: 2px;
+    line-height: 35px;
+    top: 15%;
+    -webkit-animation-name: posi;
+    -webkit-animation-duration: 2%;
+    animation-name: posi;
+    animation-duration: 2%;
+    z-index: 1;
+}
+@keyframes posi{
+    from{left: 25%;}
+    to {left: 15%;}
+}
+.txt h1{
+    color: #275ef5;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.txt p{
+    font-weight: bold;
+    font-size: 20px;
+}
+.myslider img{
+    transform: scale(1.5, 1.5);
+    -webkit-animation-name: zoomin;
+    -webkit-animation-duration: 40s;
+    animation-name: zoomin;
+    animation-duration: 40s;
+}
+@keyframes zoomin{
+    from {transform: scale(1, 1);}
+    to {transform: scale(1.5, 1.5);}
+}
+@media screen and (max-width: 800px){
+    .myslider{
+        height: 500px;
+    }
+    .txt{
+        line-height: 25px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -webkit-animation-name: posi2;
+        -webkit-animation-duration: 2s;
+        animation-name: posi2;
+        animation-duration: 2s;
+    }
+    @-webkit-keyframes posi2{
+        from {top:35%;}
+        to {top: 50%;}
+    }
+    @keyframes posi2{
+        from {top:35%;}
+        to {top: 50%;}
+    }
+    .txt h1{
+        font-size: 20px;
+
+    }
+    .txt p{
+        font-size: 13px;
+    }
+}
+
+
+.slider .myslider img{
+    width: 100%;
+    height: 100%;
+}
+/*pagina notatie van de slideshow*/
+div .dotsbox{
+    text-align: center;
+}
+/*-------------------------------------------welkom-------------------------------------*/
+.welkom{
+    width: 90%;
+    margin-left: 30px;
+}
+/*-------------------------------------------Chart Persoonlijke info----------------------------------------------*/
+.middle{
+    position: absolute;
+    top: 100%;
+    width: 5%;
+    transform: translateY(-50%);
+    margin-left: 0%;
+    margin-top: 30%;
+}
+.counter-sec{
+    padding: 5px 0;
+    width: 60%;
+    background: linear-gradient(90deg, #3c6382, #82ccdd);
+}
+.inner-with{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+}
+.col{
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+.col i{
+    font-size: 40px;
+    color:  #275ef5;
+}
+.num{
+    font-size: 40px;
+    margin: 20px 0;
 }
 
 
 
+/*-------------------------------------------Gauge G force----------------------------------------------*/
+aside{
+    width: 50%;
+    max-width: 250px;
+    font-size: 20px;
+    margin-left: 20%;
+    margin-top: 50%;
+}
+.gauge{
+    margin-left: 25%;
+    margin-top: 150px;
+}
+.gaugeBody{
+    width: 100%;
+    height: 0;
+    padding-bottom: 50%;
+    background: rgb(141, 139, 139);
+    position: relative;
+    border-top-left-radius: 100% 200%;
+    border-top-right-radius: 100% 200%;
+    overflow: hidden;
+}
+.gaugeFill{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: inherit;
+    height: 100%;
+    background: #ffc400;
+    transform-origin: center top;
+    transform: rotate(0.30turn);
+    transition: transform 0.2s ease-out;
+}
+.gaugeCover{
+    width: 75%;
+    height: 150%;
+    background: #000000;
+    border-radius: 50%;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    /*text*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 25%;
+    box-sizing: border-box;
+}
+.gforce{
+    width: 80%;
+    position: right;
+    margin-left: 10%;
+    margin-top: -0%;
+}
+a:link {
+    color: #275ef5;
+  }
+
+  /*-----------------------<a> link styling---------------------/*
+  /* visited link */
+  a:visited {
+    color: #4bd5ff;
+  }
+  
+  /* mouse over link */
+  a:hover {
+    color: #b08fff;
+  }
+  
+  /* selected link */
+  a:active {
+    color: #da38b7;
+  }
+  
+/*-------------------------------------------Waardes cards----------------------------------------------*/
+/*info waardes*/
+.progress-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .progress-container + .progress-container {
+    margin-top: 1rem;
+  }
+  
+  .progress-container span {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+  }
+  
+  .progress-bar {
+    transform: rotate(-90deg);
+  }
+  
+  .progress-bar circle {
+    stroke-dashoffset: 0;
+    transition: stroke-dashoffset 1.5s ease-in-out;
+    stroke: #666;
+  }
+  
+  .progress-bar .progress-value {
+    stroke:  #bb5c0f;
+    stroke-dashoffset: 301.59;
+  }
+  section h3{
+      position: center;
+      margin-left: 37%;
+      margin-bottom: 5%;
+  }
   
   /*--------------------------footer------------------------*/
   .footer {
    position: fixed;
    left: 0;
-   bottom: 0;     
+   bottom: 0;
    width: 100%;
    background-color: #f52727;
    opacity: 80%;
@@ -39,18 +391,136 @@ body{
 
 /*---------------------------mediaquery----------------------------------*/
 @media only screen and (min-width: 520px) {
+    header{
+        margin-left: 0%;
+    }
+    #logo{
+        margin-left: 60px;
+    }
+    .welkom{
+        margin-left: 60px;
+    }
+    .middle{
+        margin-top: 10%;
+        margin-left: 0px;
+        width: 90%;
+    }
+    aside{
+        margin-left: 60%;
+        margin-top: 60%;
+    }
+    .gauge{
+        margin-top: 20%;
+    }
+    .buttons{
+        margin-right: 20px;
+    }
+    .txt h1{
+        font-size: 30px;
+    }
+    .sign{
+        margin-right: 20px;
+    }
+    .sign a{
+        font-size: 12px;
+    }
 
-}
-    
-@media only screen and (min-width: 700px) {   
+    .wrapper{
+        width: 550px;
+    }
+    h1{
+        margin-left: 0px;
+    }
+    .wrapper .card{
+        width: calc(15% - -80px);
+        margin-bottom: 20px;
+        margin-left: 70px;
+        margin-right: 20px;
+    }
+@media only screen and (min-width: 700px) {
+    #logo{
+        width: 500px;
+    }
+    .welkom{
+        margin-left: 80px;
+    }
+    .middle{
+        margin-top: 20%;
+        width: 100%;
+    }
+    aside{
+        margin-left: 0px;
+        margin-top: 30%;
+    }
+    .gauge{
+        margin-top: 35%;
+        margin-left: 40%;
+    }
+    .txt{
+        padding: 70px;
+    }
 
 }
 @media only screen and (min-width: 800px) {
+    .middle{
+        margin-top: 20%;
+    }
+    aside{
+        margin-top: 30%;
+    }
+    .gauge{
+        margin-top: 20%;
+        margin-left: 40%;
+    }
+    .wrapper{
+        width: 700px;
+    }
+    .wrapper .card{
+        width: calc(5% - -70px);
+        margin-bottom: 20px;
+        margin-left: 15%;
+        margin-right: auto;
+    }
 
 }
 @media only screen and (min-width: 1000px) {
-   
+    .txt{
+        padding: 100px;
+    }
+    .txt h1{
+        font-size: 40px;
+    }
+    .sign{
+        margin-right: 25px;
+    }
+    .sign a{
+        font-size: 16px;
+    }
+    .wrapper{
+        width: 1000px;
+    }
+    .wrapper .card{
+        width: calc(10% - -100px);
+        margin-bottom: 20px;
+        margin-left: 10%;
+        margin-right: auto;
+    }
 }
 @media only screen and (min-width: 1400px) {
-    
+    .welkom{
+        margin-left: 120px;
+    }
+    .middle{
+        margin-left: 10px;
+        margin-right: auto;
+    }
+    .wrapper{
+        width: 1200px;
+    }
+    .wrapper .card{
+        width: calc(10% - -150px);
+        margin-bottom: 20px;
+        margin-left: 10%;
+        margin-right: auto;
+    }
 }
